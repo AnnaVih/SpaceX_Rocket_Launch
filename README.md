@@ -39,7 +39,7 @@ $ npm start
 ```
 
 ### Build
-Compile and build production version
+Compile and build 
 
 ```sh
 $ npm run build
