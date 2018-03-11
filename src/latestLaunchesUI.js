@@ -22,7 +22,7 @@ export class LastestLaunchesUI {
             const launch =  launches[i];
 
            //3. Destructure data from recieved object into variables
-           const {flight_number, launch_date_utc, links, rocket, details, launch_success } = launch;
+           const {flight_number, launch_date_utc, links, rocket, details, launch_site, launch_success } = launch;
 
             //4. Call methods to get normal date and time from utc format
             const fullDateAndTimeOfLaunch =  this.convertUtcDateToNormal(launch_date_utc);
@@ -72,7 +72,11 @@ export class LastestLaunchesUI {
                                 <p>
                                     <span class="generic">Details:</span> ${details ? details : ' No info about this launch'}
                                 </p>
+                                ${links.mission_patch ? `<img class="mission_patch" src="${links.mission_patch} alt="Mission patch"/>` : ''}
 
+                                <p class="mt-3">
+                                    <span class="generic">Launch site name: </span> ${launch_site.site_name}
+                                 </p>
                                 </div>
                                 <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
