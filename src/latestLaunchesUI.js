@@ -54,11 +54,32 @@ export class LastestLaunchesUI {
                                                 <p><span class="generic">Launch time:</span><br> ${fullDateAndTimeOfLaunch.hour}:${fullDateAndTimeOfLaunch.minut}</p>
                                             </div>
                                             <div class="col-sm-4 ">
-                                                <p><a href="${1}" class="btn btn-outline-danger btn-block">More details</a></p>
+                                                <p>
+                                                    <button type="button" data-toggle="modal" data-target="#flight-${flight_number}" class="btn btn-outline-danger btn-block">More details</button>
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
-                             </div>`;
+                             </div>
+
+                            <div class="modal fade" id="flight-${flight_number}" tabindex="-1" role="dialog" aria-labelledby="flight-${flight_number}-label" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <h5 class="modal-title" id="flight-${flight_number}-label">Launch details</h5>
+                                </div>
+                                <div class="modal-body">
+                                <p>
+                                    <span class="generic">Details:</span> ${details ? details : ' No info about this launch'}
+                                </p>
+
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                            </div>
+                            </div>`;
 
             };
 
