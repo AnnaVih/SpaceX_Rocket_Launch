@@ -61,5 +61,5 @@ function getRocketInfo(e) {
 //On load Event listeners
 document.addEventListener("DOMContentLoaded", getLatestLaunches);
 
-document.getElementById('launches-wrapper').addEventListener("mouseover", getRocketInfo);
+document.getElementById('launches-wrapper').addEventListener("click", getRocketInfo);
 
