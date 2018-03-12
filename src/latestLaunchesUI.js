@@ -17,7 +17,6 @@ export class LastestLaunchesUI {
     displayPosts(launches){
         //1. Create dynamic launch variable
         let  dynamicLaunches = '', dinamicModal = '';
-        console.log(launches);
 
         //2. Create id variable
         let idElem = 0;
