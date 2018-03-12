@@ -1,0 +1,28 @@
+@media only screen and (max-width: 767px) {
+    html, body {
+        font-size: 11px;
+
+        h1 {
+            font-size: 3.5rem;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    
+    #launches-wrapper {
+        margin-top: 0;
+
+        h2 {
+            font-size: 1.2rem;
+        }
+
+        .flight-num {
+            font-size: 3rem;
+        }
+    }
+}
