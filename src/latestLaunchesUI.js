@@ -4,6 +4,7 @@ export class LastestLaunchesUI {
     constructor() {
         this.launchesWrapper = document.querySelector('#launches-wrapper');
         this.launchModal     = document.querySelector('#modal');
+        this.gitHubSection   = document.querySelector('#gitHub-section');
         this.rocketHeight;
         this.rocketMass;
         this.rocketStage;
@@ -65,7 +66,6 @@ export class LastestLaunchesUI {
                                         </div>
                                     </div>
                                 </div>
-
                                 <div class="modal fade" id="flight-${flight_number}" tabindex="-1" role="dialog"    aria-labelledby="flight-${flight_number}-label" aria-hidden="true">
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
@@ -118,6 +118,10 @@ export class LastestLaunchesUI {
                             this.rocketStage  = document.querySelectorAll('.rocket-stage');
                             this.rocketDescr  = document.querySelectorAll('.rocket-descr');
         };
+
+        this.gitHubSection.style.display = 'block';
+
+
     }
 
 
