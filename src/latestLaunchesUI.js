@@ -127,9 +127,12 @@ export class LastestLaunchesUI {
         const { height, mass, stages, description } = rocketDetails;
         console.log(rocketDetails);
 
+        //2. Convert mass killograms number with comma
+        const kg = this.formatNumberWithAddingComma(mass.kg);
+
         //2. Set rocket details 
-        this.rocketHeight[idEl].innerHTML = height.meters;
-        this.rocketMass[idEl].innerHTML   = `${mass.kg} kg`;
+        this.rocketHeight[idEl].innerHTML = `${height.meters} meters`;
+        this.rocketMass[idEl].innerHTML   = `${kg} kg`;
         this.rocketStage[idEl].innerHTML  = stages;
         this.rocketDescr[idEl].innerHTML  = description;
        
@@ -183,6 +186,10 @@ export class LastestLaunchesUI {
 
        //4. Return statusMessage
        return result;
+    }
+
+    formatNumberWithAddingComma(num) {
+        return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
     }
 
 }
